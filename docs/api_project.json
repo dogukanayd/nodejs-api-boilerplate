@@ -1,0 +1,1 @@
+{  "name": "node-boilerplate",  "version": "0.1.0",  "description": "Node JS API",  "title": "Node JS API boilerplate",  "url": "",  "sampleUrl": false,  "defaultVersion": "0.0.0",  "apidoc": "0.3.0",  "generator": {    "name": "apidoc",    "time": "2019-02-20T09:02:19.189Z",    "url": "http://apidocjs.com",    "version": "0.17.7"  }}
