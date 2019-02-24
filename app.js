@@ -15,6 +15,12 @@ const app = express();
 
 app.use(cors());
 
+var swaggerUi = require('swagger-ui-express'),
+    swaggerDocument = require('./swagger.json');
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+app.use('/api/v1', authRoute);
+
 
 app.use(logger('dev'));
 app.use(cookieParser());
@@ -61,6 +67,6 @@ app.use(
 app.use(express.static(path.resolve('./docs')));
 
 // api end points v1.0
-app.use('/v1/', authRoute);
+app.use('api/v1/', authRoute);
 
 module.exports = app;
